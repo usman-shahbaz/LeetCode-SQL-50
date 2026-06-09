@@ -1,0 +1,17 @@
+from collections import Counter
+
+def majorityElement(self, nums: List[int]) -> int:
+
+    cnt = 0
+    cnd = None
+
+    for n in nums:
+
+        if cnt == 0:
+            cnd = n
+
+        if n == cnd:
+            cnt += 1
+        else:
+            cnt -= 1
+    return cnd
