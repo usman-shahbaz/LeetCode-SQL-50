@@ -1,4 +1,4 @@
-def twoSum(self, numbers, target):
+def twoSum(numbers, target):
 
     start = 0
     end = len(numbers) - 1
