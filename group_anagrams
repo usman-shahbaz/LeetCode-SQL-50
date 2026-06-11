@@ -1,12 +1,11 @@
+def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
 
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+f = defaultdict(list)
 
-        f = defaultdict(list)
+for i in strs:
 
-        for i in strs:
+    k = ''.join(sorted(i))
 
-            k = ''.join(sorted(i))
+    f[k].append(i)
 
-            f[k].append(i)
-
-        return list(f.values())
+return list(f.values())
