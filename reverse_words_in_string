@@ -4,4 +4,4 @@ def reverseWords(s):
 
     w.reverse()
 
-    return ' '.join(w)
+    return ' '.join(w
