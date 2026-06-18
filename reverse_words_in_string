@@ -1,0 +1,7 @@
+def reverseWords(s):
+    
+    w = s.split()
+
+    w.reverse()
+
+    return ' '.join(w)
