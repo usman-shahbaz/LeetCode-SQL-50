@@ -1,0 +1,18 @@
+def findAnagrams(s, p):
+
+    need = Counter(p)
+    w = Counter()
+    l = 0
+    res = []
+    n = len(s)
+
+    for r in range(n):
+        w[s[r]] += 1
+
+        if r-l+1 > len(p):
+            w[s[l]] -= 1
+            l += 1
+
+        if w == need:
+            res.append(l)
+    return res
