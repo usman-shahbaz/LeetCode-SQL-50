@@ -1,0 +1,21 @@
+def checkInclusion(s1, s2):
+    
+    need = Counter(s1)
+    w = Counter()
+    l = 0
+    n = len(s2)
+
+    for r in range(n):
+
+        w[s2[r]] += 1
+
+        if r-l+1 > len(s1):
+            w[s2[l]] -= 1
+
+            if w[s2[l]] == 0:
+                del w[s2[l]]
+            l += 1
+
+        if w == need:
+            return True
+    return False
