@@ -1,5 +1,4 @@
-
-def mySqrt(x: int) -> int:
+def mySqrt(x):
     if x < 2:  # 0 and 1 cases
         return x
     
@@ -13,10 +12,3 @@ def mySqrt(x: int) -> int:
         else:
             right = mid - 1
     return ans
-
-
-print(mySqrt(4))  # 2
-print(mySqrt(8))  # 2
-print(mySqrt(0))  # 0
-print(mySqrt(1))  # 1
-print(mySqrt(15)) # 3
