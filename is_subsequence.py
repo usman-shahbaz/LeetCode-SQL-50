@@ -1,4 +1,4 @@
-def isSubsequence(s, t) -> bool:
+def isSubsequence(s, t):
     m = len(s)
     n = len(t)
 
