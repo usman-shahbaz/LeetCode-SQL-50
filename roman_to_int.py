@@ -13,8 +13,8 @@ def romanToInt(s):
     n = len(s)
 
     for i in range(n):
-        if roman[s[i]] < roman[s[i+1]]:
-            total += roman[s[i]]
-        else:
+        if i+1 < n and roman[s[i]] < roman[s[i+1]]:
             total -= roman[s[i]]
+        else:
+            total += roman[s[i]]
     return total
