@@ -1,5 +1,4 @@
-
-    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
 
             
         i = 0
