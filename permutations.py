@@ -1,27 +1,26 @@
-class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+def permute(nums):
 
-        c = []
-        r = []
-        n = len(nums)
-        used = [False] * n
+    c = []
+    r = []
+    n = len(nums)
+    used = [False] * n
 
-        def b():
-            if len(c) == n:
-                r.append(c[:])
+    def b():
+        if len(c) == n:
+            r.append(c[:])
 
-            for i in range(n):
+        for i in range(n):
 
-                if used[i]:
-                    continue
+            if used[i]:
+                continue
 
-                c.append(nums[i])
-                used[i] = True
+            c.append(nums[i])
+            used[i] = True
 
-                b()
+            b()
 
-                c.pop()
-                used[i] = False
+            c.pop()
+            used[i] = False
 
-        b()
-        return r
+    b()
+    return r
