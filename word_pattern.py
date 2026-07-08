@@ -1,4 +1,4 @@
-def wordPattern(pattern, s ):
+def wordPattern(pattern, s):
         
         words = s.split()
 
